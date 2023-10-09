@@ -1,0 +1,38 @@
+<div *ngIf="!loading" class="card">
+    <div class="card-header">
+        <a>Productos:</a>
+        <button routerLink="/add" type="button" class="btn btn-primary">Nuevo Producto</button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table *ngIf="listaProductos.length>0" class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col"> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of listaProductos" class="table-light">
+                        <td scope="row"> {{item.id }} </td>
+                        <td>{{ item.nombre }} </td>
+                        <td>{{ item.imagen }} </td>
+                        <td>{{ item.precio }} </td>
+                        <td>
+                            <a routerLink="/add/{{item.id}}" name="" id="" class="btn btn-primary"  role="button">Editar</a>
+                            <a> | </a>
+                            <a (click)="deleteProducto(item.id!)" name="" id="" class="btn btn-secondary"  role="button">Borrar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a *ngIf="listaProductos.length==0"> No hay Productos para mostrar </a>
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        
+    </div>
+</div>

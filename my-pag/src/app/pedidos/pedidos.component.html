@@ -1,0 +1,47 @@
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                    Datos de los Pedidos
+                </div>
+                <form action="/admin/autos/guardar" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="txtNombre" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" name="txtNombre" id="txtNombre" aria-describedby="helpId" placeholder="Nombre del Producto">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtImagen" class="form-label">Imagen:</label>
+                        <input type="file" class="form-control" name="txtImagen" id="txtImagen" aria-describedby="helpId" placeholder="Imagen">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtPrecio" class="form-label">Precio:</label>
+                        <input type="text" class="form-control" name="txtPrecio" id="txtPrecio" aria-describedby="helpId" placeholder="Precio">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                </form>
+                <div class="card-footer text-muted">
+
+                </div>
+            </div>
+        </div> 
+        <div class="col-8">
+            <div class="table-responsive">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombre del pedido</th>
+                            <th scope="col">Imagen </th>
+                            <th scope="col">Precio </th>
+                        </tr>
+                    </thead>
+                    <button type="submit" class="btn btn-primary">Editar</button>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Borrar</button>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

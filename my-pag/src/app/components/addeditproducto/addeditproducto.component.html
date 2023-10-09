@@ -1,0 +1,37 @@
+<div class="row mt-1">
+    <div class="col-lg-4 offset-lg-4">
+        <div class="col"></div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header text-center">
+                   {{operacion}}  Producto
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="formProducto" (ngSubmit)="addProducto()">
+                        <div class="mb-3">
+                          <label for="" class="form-label">Nombre</label>
+                          <input formControlName="nombre" type="text" name="nombre" id="" class="form-control mt-2" placeholder="Ingrese nombre" aria-describedby="helpId">
+                          <label for="" class="form-label">Imagen</label>
+                          <input formControlName="imagen" type="text" name="imagen" id="" class="form-control mt-2" placeholder="Ingrese precio" aria-describedby="helpId">
+                          <label for="" class="form-label">Precio</label>
+                          <input formControlName="precio" type="number" name="precio" id="" class="form-control mt-2" placeholder="Ingrese cantidad" aria-describedby="helpId">  
+                          <div class="row mt-2 text-center">
+                            <div class="col-lg-6">
+                                <button routerLink="/pedidos" type="button" class="btn btn-outline-primary">Volver</button>
+                            </div>
+                            <div class="col-lg-6">
+                                <button type="submit" class="btn btn-outline-secondary">Aceptar</button>      
+                            </div>
+                          </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-muted">
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
